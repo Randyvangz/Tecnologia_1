@@ -1,11 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologia 1</title>
+    <title>Gamer Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <h1 class="logo">GamerZone</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#features">Características</a></li>
+                    <li><a href="#games">Juegos</a></li>
+                    <li><a href="#team">Equipo</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>Bienvenido a GamerZone</h2>
+            <p>La mejor experiencia gaming con efectos neon</p>
+            <a href="#games" class="btn">Explorar Juegos</a>
+        </div>
+    </section>
+
+    <section id="about" class="content">
+        <h2>Sobre Nosotros</h2>
+        <p>En GamerZone, nos dedicamos a ofrecer la mejor experiencia para los gamers. Con los últimos títulos y una comunidad activa, somos tu destino de referencia en el mundo del gaming.</p>
+    </section>
+
+    <section id="features" class="content">
+        <h2>Características</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Gráficos Increíbles</h3>
+                <p>Disfruta de los gráficos más impresionantes en cada juego.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Comunidad Activa</h3>
+                <p>Únete a una comunidad de jugadores apasionados y participa en eventos.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Actualizaciones Constantes</h3>
+                <p>Mantente al día con las últimas actualizaciones y nuevos lanzamientos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="content">
+        <h2>Juegos Populares</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="game1.jpg" alt="Juego 1">
+                <h3>Juego 1</h3>
+            </div>
+            <div class="game-card">
+                <img src="game2.jpg" alt="Juego 2">
+                <h3>Juego 2</h3>
+            </div>
+            <div class="game-card">
+                <img src="game3.jpg" alt="Juego 3">
+                <h3>Juego 3</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="content">
+        <h2>Nuestro Equipo</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="team1.jpg" alt="Miembro del Equipo 1">
+                <h3>Miembro 1</h3>
+                <p>Descripción del miembro 1 del equipo.</p>
+            </div>
+            <div class="team-member">
+                <img src="team2.jpg" alt="Miembro del Equipo 2">
+                <h3>Miembro 2</h3>
+                <p>Descripción del miembro 2 del equipo.</p>
+            </div>
+            <div class="team-member">
+                <img src="team3.jpg" alt="Miembro del Equipo 3">
+                <h3>Miembro 3</h3>
+                <p>Descripción del miembro 3 del equipo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GamerZone. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para animar el fondo -->
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const move = document.querySelectorAll('.move');
+            move.forEach(layer => {
+                const speed = layer.getAttribute('data-speed');
+                const x = (window.innerWidth - e.pageX * speed) / 100;
+                const y = (window.innerHeight - e.pageY * speed) / 100;
+                layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        });
+    </script>
 </body>
 </html>
