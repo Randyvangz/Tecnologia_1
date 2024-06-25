@@ -1,309 +1,324 @@
 /* Estilos generales */
 body {
-     margin: 0;
-     font-family: 'Arial', sans-serif;
-     background-color: #0d0d0d;
-     color: #fff;
-     overflow-x: hidden;
- }
- 
- /* Encabezado */
- header {
-     background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
-     padding: 20px 0;
-     position: fixed;
-     width: 100%;
-     z-index: 1000;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
- }
- 
- .container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0 20px;
- }
- 
- .logo {
-     font-size: 24px;
-     font-weight: bold;
-     color: #39ff14;
-     text-shadow: 0 0 10px #39ff14;
- }
- 
- nav ul {
-     list-style: none;
-     display: flex;
-     margin: 0;
-     padding: 0;
- }
- 
- nav ul li {
-     margin-left: 20px;
- }
- 
- nav ul li a {
-     color: #fff;
-     text-decoration: none;
-     font-weight: bold;
-     transition: color 0.3s ease;
- }
- 
- nav ul li a:hover {
-     color: #b533ff;
- }
- 
- /* Hero */
- .hero {
-     height: 100vh;
-     background: url('hero-bg.jpg') no-repeat center center/cover;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     position: relative;
-     text-align: center;
-     overflow: hidden;
- }
- 
- .overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: rgba(0, 0, 0, 0.7);
-     z-index: 1;
- }
- 
- .hero-content {
-     position: relative;
-     z-index: 2;
-     animation: fadeIn 2s ease-in-out;
- }
- 
- .hero-content h2 {
-     font-size: 48px;
-     color: #39ff14;
-     text-shadow: 0 0 20px #39ff14;
- }
- 
- .hero-content p {
-     font-size: 24px;
-     color: #fff;
-     margin-bottom: 20px;
- }
- 
- .btn {
-     display: inline-block;
-     padding: 10px 20px;
-     background: linear-gradient(90deg, #39ff14, #b533ff);
-     color: #fff;
-     text-decoration: none;
-     font-weight: bold;
-     border-radius: 5px;
-     transition: background 0.3s ease, transform 0.3s ease;
- }
- 
- .btn:hover {
-     background: linear-gradient(90deg, #b533ff, #39ff14);
-     transform: scale(1.1);
- }
- 
- /* Secciones */
- .content {
-     padding: 60px 20px;
-     text-align: center;
- }
- 
- .content h2 {
-     font-size: 36px;
-     margin-bottom: 20px;
-     animation: slideInFromLeft 1s ease-in-out;
- }
- 
- .content p {
-     max-width: 800px;
-     margin: 0 auto;
- }
- 
- .features-grid, .games-grid, .team-grid {
-     display: flex;
-     justify-content: center;
-     gap: 20px;
-     flex-wrap: wrap;
- }
- 
- .feature-card, .game-card, .team-member {
-     background: #1a1a1a;
-     padding: 20px;
-     border-radius: 10px;
-     transition: transform 0.3s ease;
- }
- 
- .feature-card:hover, .game-card:hover, .team-member:hover {
-     transform: scale(1.05);
- }
- 
- .game-card img, .team-member img {
-     width: 100%;
-     border-radius: 10px;
-     transition: transform 0.3s ease;
- }
- 
- .game-card img:hover, .team-member img:hover {
-     transform: scale(1.1);
- }
- 
- .game-card h3, .team-member h3 {
-     margin-top: 10px;
-     color: #39ff14;
-     text-shadow: 0 0 10px #39ff14;
- }
- 
- /* Formulario */
- form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
- }
- 
- form label {
-     margin: 10px 0 5px;
- }
- 
- form input, form textarea {
-     width: 100%;
-     max-width: 500px;
-     padding: 10px;
-     border: none;
-     border-radius: 5px;
-     margin-bottom: 20px;
-     background: #333;
-     color: #fff;
- }
- 
- form button {
-     background: linear-gradient(90deg, #39ff14, #b533ff);
-     border: none;
-     padding: 10px 20px;
-     color: #fff;
-     font-weight: bold;
-     border-radius: 5px;
-     cursor: pointer;
-     transition: background 0.3s ease, transform 0.3s ease;
- }
- 
- form button:hover {
-     background: linear-gradient(90deg, #b533ff, #39ff14);
-     transform: scale(1.1);
- }
- 
- /* Footer */
- footer {
-     background: #1a1a1a;
-     padding: 20px;
-     text-align: center;
- }
- 
- footer p {
-     margin: 0;
-     color: #fff;
- }
- 
- /* Animaciones */
- @keyframes fadeIn {
-     from {
-         opacity: 0;
-     }
-     to {
-         opacity: 1;
-     }
- }
- 
- @keyframes slideInFromLeft {
-     from {
-         transform: translateX(-100%);
-     }
-     to {
-         transform: translateX(0);
-     }
- }
- 
- /* Media Queries */
- @media (max-width: 768px) {
-     nav ul {
-         flex-direction: column;
-         background: #1a1a1a;
-         position: absolute;
-         top: 60px;
-         right: 0;
-         width: 200px;
-         height: 100vh;
-         transform: translateX(100%);
-         transition: transform 0.3s ease;
-     }
- 
-     nav ul li {
-         margin: 20px 0;
-     }
- 
-     nav ul.active {
-         transform: translateX(0);
-     }
- 
-     .hero-content h2 {
-         font-size: 36px;
-     }
- 
-     .hero-content p {
-         font-size: 18px;
-     }
- 
-     .content h2 {
-         font-size: 28px;
-     }
- 
-     .container {
-         flex-direction: column;
-     }
- 
-     .logo {
-         margin-bottom: 10px;
-     }
- }
- 
- @media (max-width: 480px) {
-     .hero-content h2 {
-         font-size: 28px;
-     }
- 
-     .hero-content p {
-         font-size: 16px;
-     }
- 
-     .btn {
-         padding: 8px 16px;
-     }
- 
-     .content h2 {
-         font-size: 24px;
-     }
- }
- 
- /* Fondo interactivo */
- .hero {
-     position: relative;
- }
- 
- .hero .move {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
-     background: url('particle-bg.png') repeat;
-     background-size: cover;
-     opacity: 0.4;
-     pointer-events: none;
- }
- 
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b533ff;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    color: #39ff14;
+    text-shadow: 0 0 20px #39ff14;
+}
+
+.hero-content p {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #39ff14, #b533ff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #b533ff, #39ff14);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Secciones */
+.content {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.content p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-grid, .games-grid, .team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card, .game-card, .team-member {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover, .game-card:hover, .team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.game-card img, .team-member img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.game-card img:hover, .team-member img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.game-card h3, .team-member h3 {
+    margin-top: 10px;
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14;
+}
+
+/* Ajustar tamaño de imágenes de miembros del equipo */
+.team-member img {
+    width: 150px;  /* Ajusta el tamaño según sea necesario */
+    height: 150px;  /* Ajusta el tamaño según sea necesario */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #333;
+    color: #fff;
+}
+
+form button {
+    background: linear-gradient(90deg, #39ff14, #b533ff);
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #b533ff, #39ff14);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+}
+
+/* Fondo interactivo */
+.hero {
+    position: relative;
+}
+
+.hero .move {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('particle-bg.png') repeat;
+    background-size: cover;
+    opacity: 0.4;
+    pointer-events: none;
+}
